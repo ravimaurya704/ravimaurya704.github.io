@@ -18,13 +18,43 @@ export default function About() {
         <div className="space-y-6">
           <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
             <h3 className="text-sm font-semibold text-slate-900">Certifications</h3>
-            <ul className="mt-3 space-y-2 text-sm text-slate-600">
-              {profile.certifications.map((c) => (
-                <li key={c} className="flex gap-2">
-                  <span className="text-emerald-600">•</span>
-                  {c}
-                </li>
-              ))}
+            <ul className="mt-3 space-y-3">
+              {profile.certifications.map((cert) => {
+                const content = (
+                  <>
+                    {cert.logo ? (
+                      <img
+                        src={cert.logo}
+                        alt={cert.issuer}
+                        className="h-6 w-6 shrink-0 rounded object-contain"
+                      />
+                    ) : (
+                      <span
+                        className="h-6 w-6 shrink-0 rounded bg-slate-200"
+                        aria-hidden="true"
+                      />
+                    )}
+                    <span className="text-sm text-slate-600">{cert.name}</span>
+                  </>
+                );
+
+                return (
+                  <li key={cert.name}>
+                    {cert.link ? (
+                      <a
+                        href={cert.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-3 rounded-lg transition hover:text-emerald-700"
+                      >
+                        {content}
+                      </a>
+                    ) : (
+                      <div className="flex items-center gap-3">{content}</div>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

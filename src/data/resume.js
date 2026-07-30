@@ -5,6 +5,7 @@ import usHealthConnectLogo from "../assets/logos/us-health-connect.png";
 import hercRentalsLogo from "../assets/logos/herc-rentals.png";
 import melstarLogo from "../assets/logos/melstar.png";
 import sparLogo from "../assets/logos/SPAR.jpg";
+import microsoftLogo from "../assets/logos/microsoft.png";
 
 export const profile = {
   name: "Ravi Maurya",
@@ -14,15 +15,43 @@ export const profile = {
   phone: "0899896130",
   linkedin: "https://linkedin.com/in/ravimaurya704",
   github: "https://github.com/ravimaurya704",
-  topSkills: ["SQL", "Python", "Machine Learning", "QlikView", "Qlik Sense", "ETL"],
+  topSkills: ["Power BI", "SQL", "Python", "Machine Learning", "QlikView", "Qlik Sense", "Qlik Cloud", "Microsoft Fabric", "ETL"],
   summary: [
     "Senior BI & Analytics Developer with 6+ years progressing Software Engineer → Senior Officer → Senior Consultant, with full ownership of BI delivery and architecture across financial services and enterprise SaaS clients.",
     "Owned end-to-end BI delivery for global enterprise accounts — American Express, Herc Rentals, US Health Connect, and HDFC — architecting cloud migrations, dashboard programs, and stakeholder sign-off as sole or lead developer.",
-    "People-management experience leading a team of 3 BI developers at HDFC. Completed MSc in Data Analytics (First-Class Honours, 80.89%) in early 2026 while earning PL-300 and progressing DP-600, staying hands-on with Power BI and Microsoft Fabric throughout.",
+    "People-management experience leading a team of 3 BI developers at HDFC. Completed MSc in Data Analytics (First-Class Honours, 80.89%) in early 2026, earning PL-300 and DP-600 along the way, staying hands-on with Power BI and Microsoft Fabric throughout.",
   ],
   certifications: [
-    "Power BI Data Analyst Associate (PL-300)",
-    "Qlik Sense Data Architect (QSDA)",
+    {
+      name: "Power BI Data Analyst Associate (PL-300)",
+      issuer: "Microsoft",
+      logo: microsoftLogo,
+      link: "https://learn.microsoft.com/en-us/users/ravimaurya-3880/credentials/certification/data-analyst-associate",
+    },
+    {
+      name: "Fabric Analytics Engineer Associate (DP-600)",
+      issuer: "Microsoft",
+      logo: microsoftLogo,
+      link: "https://learn.microsoft.com/en-us/users/ravimaurya-3880/credentials/certification/fabric-analytics-engineer-associate",
+    },
+    {
+      name: "Qlik Sense Data Architect (QSDA)",
+      issuer: "Qlik",
+      logo: qlikLogo,
+      link: "https://www.credly.com/go/a7TIv6c2",
+    },
+    {
+      name: "Data Warehousing & Pipeline Development in Microsoft Fabric",
+      issuer: "Microsoft / Coursera",
+      logo: microsoftLogo,
+      link: "https://coursera.org/verify/1NE5GO4KBN6E",
+    },
+    {
+      name: "Claude AI and Prompting for Everyone",
+      issuer: "Coursera",
+      logo: null,
+      link: "https://coursera.org/share/12237479bca7b24f9a26f4213eff7290",
+    },
   ],
   visa:
     "Stamp 1G visa: Full-time work permission under the Third Level Graduate Programme, granted May 2026 — valid to May 2027, renewable to May 2028.",
@@ -31,23 +60,33 @@ export const profile = {
 export const experience = [
   {
     company: "Qlik",
-    role: "Senior Consultant",
-    period: "May 2022 – Jan 2025",
-    location: "Mumbai, India",
+    role: "Senior Qlik Consultant",
+    period: "Jan 2024 – Jan 2025",
+    location: "Maharashtra, India",
     logo: qlikLogo,
     clients: [
       { name: "American Express", logo: amexLogo },
       { name: "Herc Rentals", logo: hercRentalsLogo },
       { name: "US HealthConnect", logo: usHealthConnectLogo },
     ],
-    tech: ["Qlik Sense", "QlikView", "Qlik NPrinting", "Qlik Cloud (SaaS)", "Qlik AutoML", "SQL", "Python (Pandas, NumPy)"],
+    tech: ["Qlik Sense", "Qlik Cloud (SaaS)", "Qlik AutoML", "SQL", "Python (Pandas, NumPy)"],
     points: [
       "Owned end-to-end BI delivery for two Fortune 500 accounts (American Express, Herc Rentals) plus US Health Connect, as sole developer accountable for architecture, stakeholder sign-off, and production support across 2,000+ users.",
       "Architected migration of legacy QlikView on-premises environments to Qlik Cloud (SaaS), enabling advanced governance with zero data integrity failures.",
       "Built predictive models using Qlik AutoML within Qlik Cloud to surface risk and churn insights directly inside dashboards.",
+      "Designed Star/Snowflake schemas for large-scale financial datasets and led sprint demos/UAT sign-off with client leadership.",
+    ],
+  },
+  {
+    company: "Qlik",
+    role: "Qlik Consultant",
+    period: "May 2022 – Jan 2024",
+    location: "Mumbai, India",
+    logo: qlikLogo,
+    tech: ["QlikView", "Qlik Sense", "Qlik NPrinting", "SQL"],
+    points: [
       "Automated 40–60 reports via Qlik NPrinting, eliminating manual reporting overhead through scheduled distribution cycles.",
       "Refactored SQL extraction queries and Qlik load scripts, cutting average app reload times by ~30%.",
-      "Designed Star/Snowflake schemas for large-scale financial datasets and led sprint demos/UAT sign-off with client leadership.",
     ],
   },
   {
@@ -83,13 +122,13 @@ export const experience = [
   },
   {
     company: "SPAR Ireland",
-    role: "Sales Assistant (Part-Time)",
+    role: "Retail Assistant (Part-Time)",
     period: "Apr 2025 – Present",
     location: "Dublin, Ireland",
     logo: sparLogo,
     tech: [],
     points: [
-      "Held part-time throughout full-time MSc studies (Jan 2025 – Feb 2026); continuing part-time while completing PL-300 and DP-600 certifications and interviewing for full-time Data Analyst/BI roles in Dublin.",
+      "Held part-time throughout full-time MSc studies (Jan 2025 – Feb 2026); continuing part-time while having earned PL-300 and DP-600 certifications and interviewing for full-time Data Analyst/BI roles in Dublin.",
     ],
   },
 ];
