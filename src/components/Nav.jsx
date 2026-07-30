@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "./Logo";
 
 const links = [
@@ -12,25 +12,56 @@ const links = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 48);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const solid = scrolled || open;
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur">
+    <header
+      className={`fixed top-0 z-50 w-full transition-colors ${
+        solid
+          ? "border-b border-slate-200 bg-white/80 backdrop-blur"
+          : "border-b border-transparent bg-transparent"
+      }`}
+    >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <div className="flex items-center gap-3">
-          <a href="#top" className="flex items-center gap-3 font-semibold tracking-tight text-slate-900">
+          <a
+            href="#top"
+            className={`flex items-center gap-3 font-semibold tracking-tight transition-colors ${
+              solid ? "text-slate-900" : "text-white"
+            }`}
+          >
             <Logo />
             Ravi Maurya
           </a>
-          <span className="hidden items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700 sm:inline-flex">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+          <span
+            className={`hidden items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium sm:inline-flex ${
+              solid
+                ? "border-emerald-500/30 bg-emerald-50 text-emerald-700"
+                : "border-white/30 bg-white/10 text-white backdrop-blur-sm"
+            }`}
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" aria-hidden="true" />
             Open to Work
           </span>
         </div>
 
-        <ul className="hidden gap-8 text-sm text-slate-600 md:flex">
+        <ul
+          className={`hidden gap-8 text-sm md:flex transition-colors ${
+            solid ? "text-slate-600" : "text-white/90"
+          }`}
+        >
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="transition hover:text-emerald-600">
+              <a href={link.href} className="transition hover:text-emerald-500">
                 {link.label}
               </a>
             </li>
@@ -38,7 +69,7 @@ export default function Nav() {
         </ul>
 
         <button
-          className="text-slate-600 md:hidden"
+          className={`md:hidden transition-colors ${solid ? "text-slate-600" : "text-white"}`}
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -53,7 +84,7 @@ export default function Nav() {
       </nav>
 
       {open && (
-        <ul className="flex flex-col gap-1 border-t border-slate-200 px-6 py-4 text-sm text-slate-700 md:hidden">
+        <ul className="flex flex-col gap-1 border-t border-slate-200 bg-white px-6 py-4 text-sm text-slate-700 md:hidden">
           <li>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
