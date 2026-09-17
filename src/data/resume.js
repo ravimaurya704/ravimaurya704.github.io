@@ -4,12 +4,11 @@ import amexLogo from "../assets/logos/amex.png";
 import usHealthConnectLogo from "../assets/logos/us-health-connect.png";
 import hercRentalsLogo from "../assets/logos/herc-rentals.png";
 import melstarLogo from "../assets/logos/melstar.png";
-import sparLogo from "../assets/logos/SPAR.jpg";
 import microsoftLogo from "../assets/logos/microsoft.png";
 
 export const profile = {
   name: "Ravi Maurya",
-  title: "Senior BI & Analytics Developer",
+  title: "Data Engineer, BI Developer & ML/AI Practitioner",
   location: "Dublin, Ireland",
   email: "ravimaurya704@gmail.com",
   phone: "0899896130",
@@ -17,9 +16,9 @@ export const profile = {
   github: "https://github.com/ravimaurya704",
   topSkills: ["Power BI", "SQL", "Python", "Machine Learning", "QlikView", "Qlik Sense", "Qlik Cloud", "Microsoft Fabric", "ETL"],
   summary: [
-    "Senior BI & Analytics Developer with 6+ years progressing Software Engineer → Senior Officer → Senior Consultant, with full ownership of BI delivery and architecture across financial services and enterprise SaaS clients.",
-    "Owned end-to-end BI delivery for global enterprise accounts — American Express, Herc Rentals, US Health Connect, and HDFC — architecting cloud migrations, dashboard programs, and stakeholder sign-off as sole or lead developer.",
-    "People-management experience leading a team of 3 BI developers at HDFC. Completed MSc in Data Analytics (First-Class Honours, 80.89%) in early 2026, earning PL-300 and DP-600 along the way, staying hands-on with Power BI and Microsoft Fabric throughout.",
+    "Data Analytics professional working across Data Engineering, BI Development, and Applied ML/AI — 6+ years building enterprise data platforms and dashboards (Qlik, Power BI, Microsoft Fabric) for Fortune 500 clients including American Express, Herc Rentals, and HDFC.",
+    "Comfortable across the full stack: ingesting and modelling data (Microsoft Fabric/OneLake, Snowflake, SQL, PySpark), building governed BI semantic layers (DAX, dynamic Row-Level Security, Star/Snowflake schemas), and building/evaluating ML models (Python, TensorFlow, CNNs).",
+    "Extended this foundation with an MSc in Data Analytics (First-Class Honours, 80.89%) from Dublin Business School, covering deep learning and quantum ML — dissertation combined a CNN with a variational quantum circuit for cancer detection (95.98% accuracy). Certified: PL-300, DP-600, and QSDA.",
   ],
   certifications: [
     {
@@ -60,33 +59,23 @@ export const profile = {
 export const experience = [
   {
     company: "Qlik",
-    role: "Senior Qlik Consultant",
-    period: "Jan 2024 – Jan 2025",
-    location: "Maharashtra, India",
+    role: "Qlik Consultant → Senior Qlik Consultant",
+    period: "May 2022 – Jan 2025",
+    location: "Mumbai, India",
     logo: qlikLogo,
     clients: [
       { name: "American Express", logo: amexLogo },
       { name: "Herc Rentals", logo: hercRentalsLogo },
       { name: "US HealthConnect", logo: usHealthConnectLogo },
     ],
-    tech: ["Qlik Sense", "Qlik Cloud (SaaS)", "Qlik AutoML", "SQL", "Python (Pandas, NumPy)"],
+    tech: ["Qlik Sense", "QlikView", "Qlik Cloud", "Qlik Replicate", "Qlik AutoML", "SQL", "Python"],
     points: [
-      "Owned end-to-end BI delivery for two Fortune 500 accounts (American Express, Herc Rentals) plus US Health Connect, as sole developer accountable for architecture, stakeholder sign-off, and production support across 2,000+ users.",
-      "Architected migration of legacy QlikView on-premises environments to Qlik Cloud (SaaS), enabling advanced governance with zero data integrity failures.",
-      "Built predictive models using Qlik AutoML within Qlik Cloud to surface risk and churn insights directly inside dashboards.",
-      "Designed Star/Snowflake schemas for large-scale financial datasets and led sprint demos/UAT sign-off with client leadership.",
-    ],
-  },
-  {
-    company: "Qlik",
-    role: "Qlik Consultant",
-    period: "May 2022 – Jan 2024",
-    location: "Mumbai, India",
-    logo: qlikLogo,
-    tech: ["QlikView", "Qlik Sense", "Qlik NPrinting", "SQL"],
-    points: [
-      "Automated 40–60 reports via Qlik NPrinting, eliminating manual reporting overhead through scheduled distribution cycles.",
-      "Refactored SQL extraction queries and Qlik load scripts, cutting average app reload times by ~30%.",
+      "Qlik Cloud (SaaS) migration & governance for Fortune 500 accounts — American Express, Herc Rentals, US HealthConnect",
+      "Qlik Replicate (CDC) for real-time database replication",
+      "Qlik AutoML predictive models for risk & churn insights",
+      "Qlik NPrinting automation — 40–60 recurring reports",
+      "Star/Snowflake schema design; SQL & Python (Pandas, NumPy) for ETL",
+      "Azure DevOps, GitHub Actions/Copilot for CI/CD; Informatica for governance",
     ],
   },
   {
@@ -95,14 +84,14 @@ export const experience = [
     period: "Apr 2020 – Apr 2022",
     location: "Mumbai, India",
     logo: hdfcLogo,
-    tech: ["Power BI", "DAX", "Power Query", "Row-Level Security", "QlikView", "Qlik Sense"],
+    tech: ["Power BI", "DAX", "Row-Level Security", "SQL Server", "Snowflake", "Microsoft Purview"],
     points: [
-      "Led a team of 3 BI developers, owning end-to-end delivery, code reviews and reporting standards across Loans/LMS divisions serving 500+ daily users.",
-      "Built the organisation's first-ever NPA and Loan Management System dashboards from scratch, formally recognised by stakeholders for closing a critical reporting gap.",
-      "Developed 10–15 Power BI dashboards and 30–40 reports across Loans/LMS divisions.",
-      "Developed advanced DAX time-intelligence measures surfacing YoY variance and rolling KPIs for risk and finance teams.",
-      "Implemented dynamic Row-Level Security (RLS) across 9,000+ branches and 2,000+ users, enforcing role-based data access nationally.",
-      "Migrated legacy QlikView/Qlik Sense reports to Power BI in phases, enabling real-time analysis via Direct Query.",
+      "Power BI development — DAX time-intelligence measures, Power Query transformations",
+      "Dynamic Row-Level Security (RLS) across 9,000+ branches",
+      "QlikView/Qlik Sense → Power BI migration via Direct Query",
+      "SQL Server, Snowflake, and PostgreSQL data modelling",
+      "Microsoft Purview for data governance",
+      "Technical/delivery lead for a 3-developer BI team",
     ],
   },
   {
@@ -111,24 +100,11 @@ export const experience = [
     period: "Oct 2018 – Mar 2020",
     location: "Mumbai, India",
     logo: melstarLogo,
-    tech: ["Power BI", "SQL (Oracle 12g)", "Power Query", "DAX"],
+    tech: ["Power BI", "DAX", "Power Query", "SQL (Oracle 12c)"],
     points: [
-      "Built a central NPA dashboard and 3–4 reports tracking budget vs. risk exposure KPIs using Power BI.",
-      "Created optimised SQL views in Oracle 12g to pre-aggregate multi-table joins, improving refresh speeds.",
-      "Engineered advanced Power Query transformations — merges, custom columns, unpivoting, master calendar — for clean model ingestion.",
-      "Developed DAX time-intelligence measures surfacing YoY growth and variance across financial datasets.",
-      "Translated finance stakeholder requirements into BRDs and data mapping specs for dashboard delivery.",
-    ],
-  },
-  {
-    company: "SPAR Ireland",
-    role: "Retail Assistant (Part-Time)",
-    period: "Apr 2025 – Present",
-    location: "Dublin, Ireland",
-    logo: sparLogo,
-    tech: [],
-    points: [
-      "Held part-time throughout full-time MSc studies (Jan 2025 – Feb 2026); continuing part-time while having earned PL-300 and DP-600 certifications and interviewing for full-time Data Analyst/BI roles in Dublin.",
+      "Power BI dashboards — DAX measures, Power Query transformations (merges, unpivoting, master calendar)",
+      "SQL (Oracle 12c, PL/SQL) views for multi-table aggregation",
+      "Star schema / dimensional modelling fundamentals",
     ],
   },
 ];
@@ -198,11 +174,12 @@ export const githubProjects = [
 ];
 
 export const skills = {
-  "BI & Visualization": ["Power BI", "Qlik Sense", "QlikView", "Tableau", "Qlik NPrinting", "Qlik Cloud (SaaS)", "Qlik AutoML"],
-  "Data & Modeling": ["DAX", "M (Power Query)", "Star/Snowflake Schemas", "ETL", "Requirements Gathering & BRDs"],
-  "Programming & ML": ["Python", "Pandas", "NumPy", "Scikit-learn", "TensorFlow", "SQL", "Jupyter Notebook"],
-  "Data Platforms": ["Microsoft Fabric", "OneLake", "SSIS", "SSRS", "SQL Server", "MySQL", "Oracle 12g", "Azure SQL", "Teradata SQL"],
-  "Cloud": ["Microsoft Azure", "AWS"],
+  "Data Engineering & Cloud": ["Microsoft Fabric", "OneLake", "Lakehouse", "Dataflows Gen2", "Medallion Architecture", "Azure Data Factory", "Azure Synapse Analytics", "Snowflake", "AWS", "Google Cloud Storage", "Qlik Replicate (CDC)"],
+  "BI & Visualization": ["Power BI", "Qlik Sense", "QlikView", "Qlik Cloud (SaaS)", "Qlik NPrinting", "Qlik AutoML", "DAX", "Power Query", "Set Analysis", "ODAG"],
+  "Programming & ML": ["Python", "PySpark", "R", "SQL", "T-SQL", "PL/SQL", "TensorFlow", "Scikit-learn", "Pandas", "NumPy"],
+  "Data Modelling & Governance": ["Star/Snowflake Schema", "Dimensional Modelling", "Semantic Models", "Dynamic Row-Level Security", "Microsoft Purview", "Informatica", "CRISP-DM"],
+  "Databases": ["SQL Server", "Oracle 12c", "PostgreSQL", "Azure SQL", "Teradata SQL", "MySQL"],
+  "DevOps & Tools": ["Git", "GitHub Actions", "GitHub Copilot", "Azure DevOps", "Jira", "ServiceNow", "Claude Code"],
 };
 
 export const education = [

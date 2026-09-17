@@ -7,18 +7,18 @@ export default function Hero() {
       <div className="relative h-20 w-full overflow-hidden sm:h-28 md:h-36 lg:h-40">
         <img
           src={heroBackground}
-          alt={`${profile.name} — ${profile.title}, ${profile.location}`}
+          alt=""
+          aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover object-top"
         />
       </div>
-      {/* Visually hidden but present for screen readers / SEO, since the name and
-          title are rendered inside the banner image above rather than as text. */}
-      <h1 className="sr-only">
-        {profile.name} — {profile.title}
-      </h1>
-
       <div className="mx-auto max-w-6xl px-6 py-10">
-        <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">
+        <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+          {profile.name}
+        </h1>
+        <p className="mt-1 text-lg font-medium text-emerald-600">{profile.title}</p>
+
+        <p className="mt-6 text-xs font-semibold uppercase tracking-widest text-slate-400">
           Top Skills
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
