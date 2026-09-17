@@ -21,8 +21,8 @@ export default function Contact() {
           Let's build something data-driven together
         </h3>
         <p className="mx-auto mt-4 max-w-xl text-slate-600">
-          Based in {profile.location}, open to full-time Data Analyst / BI
-          roles.
+          Based in {profile.location}, open to full-time Data Engineer, Data
+          Analyst, and BI roles.
         </p>
 
         {!revealed ? (
