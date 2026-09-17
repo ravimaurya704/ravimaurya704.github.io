@@ -68,9 +68,10 @@ export const experience = [
       { name: "Herc Rentals", logo: hercRentalsLogo },
       { name: "US HealthConnect", logo: usHealthConnectLogo },
     ],
-    tech: ["Qlik Sense", "QlikView", "Qlik Cloud", "Qlik Replicate", "Qlik AutoML", "SQL", "Python"],
+    tech: ["Qlik Sense", "QlikView", "Qlik Cloud", "Qlik Replicate", "Qlik AutoML", "Microsoft Fabric", "SQL", "Python"],
     points: [
       "Qlik Cloud (SaaS) migration & governance for Fortune 500 accounts — American Express, Herc Rentals, US HealthConnect",
+      "Microsoft Fabric — incremental ETL pipelines & dataflows into a Lakehouse/Warehouse Medallion architecture (Bronze/Silver/Gold), reporting on the Gold layer",
       "Qlik Replicate (CDC) for real-time database replication",
       "Qlik AutoML predictive models for risk & churn insights",
       "Qlik NPrinting automation — 40–60 recurring reports",
@@ -139,35 +140,35 @@ export const githubProjects = [
   {
     title: "Fashion Retail Data Warehouse",
     description:
-      "End-to-end data warehouse and analytics solution for a fashion retail dataset, combining relational and graph modeling.",
-    tech: ["SQL Server", "SSIS", "SSRS", "Tableau", "Neo4j"],
+      "Star-schema data warehouse for a global fashion retailer — automated SSIS ETL into SQL Server, plus a Microsoft Fabric pipeline (Bronze/Silver/Gold medallion layers) feeding a Power BI semantic model, alongside Tableau dashboards, SSRS paginated reports, and Neo4j graph queries for relationship-based insights.",
+    tech: ["SQL Server", "Microsoft Fabric", "SSIS", "Power BI", "Tableau", "SSRS", "Neo4j"],
     link: "https://github.com/ravimaurya704/fashion-retail-data-warehouse",
   },
   {
     title: "HR Employee Attrition Dashboard",
     description:
-      "Interactive dashboards analyzing employee attrition drivers, built in parallel across two BI tools.",
-    tech: ["Tableau", "Power BI"],
+      "Parallel Power BI and Tableau dashboards analyzing IBM's HR Employee Attrition dataset (1,470 records) — DAX and calculated-field KPIs across six interactive visuals per tool, comparing tenure, age-group, and travel-frequency drivers of attrition.",
+    tech: ["Power BI", "DAX", "Tableau"],
     link: "https://github.com/ravimaurya704/HR-Employee-Attrition-Dashboard",
   },
   {
     title: "Customer Churn Prediction",
     description:
-      "Churn prediction model using Random Forest, covering EDA, feature engineering, and model building end-to-end.",
-    tech: ["Python", "Scikit-learn", "Random Forest"],
+      "Random Forest churn model on a 10,000-record dataset — EDA, feature engineering, and SMOTE class balancing, reaching 85% accuracy.",
+    tech: ["Python", "Scikit-learn", "Random Forest", "SMOTE"],
     link: "https://github.com/ravimaurya704/customer-churn-prediction",
   },
   {
     title: "Student Performance Prediction",
     description:
-      "Machine learning model predicting student academic performance from behavioral and demographic features.",
-    tech: ["Python", "Scikit-learn", "Jupyter Notebook"],
+      "CRISP-DM classification of student outcomes (Distinction / Merit / Needs Improvement) — compared RapidMiner AutoML against a Python/TensorFlow deep-learning model, 97.4% best accuracy. MSc Data Mining coursework, built with two co-authors.",
+    tech: ["Python", "TensorFlow", "RapidMiner", "CRISP-DM"],
     link: "https://github.com/ravimaurya704/student-performance-ml",
   },
   {
     title: "Remote Work Mental Health Analysis",
     description:
-      "Tableau dashboard exploring the relationship between remote work patterns and mental health indicators.",
+      "Tableau dashboard analyzing how remote, hybrid, and onsite work arrangements affect employee mental health across regions — a composite health-score model and five interactive visuals surfacing higher stress among hybrid workers.",
     tech: ["Tableau"],
     link: "https://github.com/ravimaurya704/Remote-Work-Mental-Health-Analysis-Tableau-Dashboard-",
   },

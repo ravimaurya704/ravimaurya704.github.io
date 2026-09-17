@@ -9,14 +9,16 @@ export default function Hero() {
           src={heroBackground}
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover object-top"
+          className="absolute inset-0 h-full w-full object-cover object-[center_55%]"
         />
       </div>
       <div className="mx-auto max-w-6xl px-6 py-10">
-        <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-          {profile.name}
-        </h1>
-        <p className="mt-1 text-lg font-medium text-emerald-600">{profile.title}</p>
+        {/* Name is intentionally not displayed in the banner — the nav bar already
+            carries it. Kept for screen readers / SEO. */}
+        <h1 className="sr-only">{profile.name}</h1>
+        <p className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
+          {profile.title}
+        </p>
 
         <p className="mt-6 text-xs font-semibold uppercase tracking-widest text-slate-400">
           Top Skills
